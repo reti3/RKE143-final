@@ -4,7 +4,7 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
     const data = await db.query('SELECT * FROM todo;');
-    res.status(200).json({ todo: data.rows });
+    res.status(200).json(data.rows);
 }); 
 
 router.post('/', async (req, res) => {
